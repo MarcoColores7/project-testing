@@ -1,0 +1,30 @@
+
+
+.imagenes{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.project-table{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    background-color: white;
+    color: black;      
+  /*  font-family: 'Poppins', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 20px;
+
+}
+
+.projects-link{
+    color:rgb(12, 116, 121);
+    border: 1px solid rgb(12,116,121);
+    border-radius: 3px;
+    padding:3px;
+    font-size: 15px;
+    margin-right: 5px;
+}
