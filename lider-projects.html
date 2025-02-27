@@ -6,44 +6,76 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet">
 
 </head>
 <body>
+       <!--Barra de navegacion-->
+       <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="login.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="lider-projects.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="status-project.html">Estado proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lider-add-project.html">Registro proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="list-bugs.html">Lista defectos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Barra de navegacion-->
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="d-flex flex-column align-items-center">
             <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png" alt="Imagen del líder" class="mb-4 imagenes">
+            <h3>Nombre del lider: </h3> 
         </div>
         <div class="d-flex flex-column align-items-center ms-4">
-            <h3>Proyectos en proceso de pruebas</h3>
+            <h3>Proyectos asignados en PRUEBAS</h3>
             <table class="project-table">
                 <thead>
-                    <th>Tipo de proyecto</th>   
-                    <th>Descripci&oacute;n</th>
-                    <th>Tecnolog&iacute;a</th>
-                    <th>Prueba</th>
+                    <th>Nombre del proyecto</th>   
+                    <th>Descripcion  del tipo  de pruebas</th>
+                    <th>Detalles</th>
+                    <th>% Avance</th>
+                    <th>Registrar proyecto</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Pruebas funcionales a sistema de compras</td>
+                        <td>Proyecto de compras institucionales</td>
                         <td>Sistema de compras para proveedoresSistema de compras</td>
                         <td><a class="projects-link" href="https://www.istqb.org/"> Manuales</td>
-                            <td><img class="imagen-project" src="https://cdn2.iconfinder.com/data/icons/web-con-set-71-solid/128/reading-list_description_document_check-list_brief_verify_manual_guide_reader-256.png"></td>
+                        <td><img class="imagenes-projects" src="https://cdn1.iconfinder.com/data/icons/charts-2/304/Untitled-41-512.png"></td>
+                        <!--<td><img class="imagenes-projects" src="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-symbols-arrows-vol-1/60/024_001_plus_more_add_open_circle_button-256.png"></td>-->
+                        <td><a href="login.html"><img class="imagenes-projects" src="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-symbols-arrows-vol-1/60/024_001_plus_more_add_open_circle_button-256.png" alt="Add"></a></tr></td>
                     </tr>
                     <tr>
-                        <td>Pruebas automatizadas a sistema de ingreso</td>
+                        <td>Proyecto de venta de boletos en linea</td>
                         <td>Sistema de para el ingreso de estudiantes </td>
                         <td><a class="projects-link" href="https://www.selenium.dev/documentation/webdriver/"> Automatizadas</td>
-                        <td><img class="imagen-project" src="https://cdn1.iconfinder.com/data/icons/agile-methodology-25/64/testing-methodology-scrum-automation-acceptance-256.png"></td>
+                        <td><img class="imagenes-projects" src="https://cdn1.iconfinder.com/data/icons/charts-2/304/Untitled-42-512.png"></td>
+                        <td><a href="login.html"><img class="imagenes-projects" src="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-symbols-arrows-vol-1/60/024_001_plus_more_add_open_circle_button-256.png" alt="Add"></a></tr></td>
                     </tr>
                     <tr>
-                        <td>Pruebas de rendimiento a sistema de resultados</td>
+                        <td>Proyecto de seguimiento a egresados </td>
                         <td>Sistema para los resultados de admisi&oacute;n  de la universidad</td>
                         <td><a class="projects-link" href="https://jmeter.apache.org/"> Rendimiento</td>
-                            <td><img class="imagen-project" src="https://cdn0.iconfinder.com/data/icons/data-analysis-51/50/78_server_performance_speedometer_seo_testing_testing_performance_report-256.png"></td>
-                    </tr>
+                        <td><img class="imagenes-projects" src="https://cdn1.iconfinder.com/data/icons/charts-2/304/Untitled-35-512.png"></td>
+                        <td><a href="login.html"><img class="imagenes-projects" src="https://cdn3.iconfinder.com/data/icons/unigrid-phantom-symbols-arrows-vol-1/60/024_001_plus_more_add_open_circle_button-256.png" alt="Add"></a></tr></td>
+                    </tr>        
                 </tbody>
             </table>
-
         </div>
     </div>
 </body>

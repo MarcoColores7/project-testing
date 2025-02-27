@@ -1,23 +1,20 @@
 
-
 .imagenes{
     margin-top: 20px;
     width: 200px;
     height: 200px;
 }
 
-
 .project-table{
     border-radius: 10px;
     overflow: hidden;
     width: 80%;
-    background-color: white;
+    background-color: rgba(104, 98, 98, 0.863);
     color: black;      
   /*  font-family: 'Poppins', sans-serif;*/
     font-family: 'Roboto', sans-serif;
 
     font-size: 20px;
-
 }
 
 .projects-link{
@@ -27,4 +24,19 @@
     padding:3px;
     font-size: 15px;
     margin-right: 5px;
+}
+
+.imagenes-projects{
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.form-add-project{
+    width: 100%;
+    max-width: 1000px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
