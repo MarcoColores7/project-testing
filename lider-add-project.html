@@ -9,7 +9,8 @@
 </head>
 <body>
 <!--Barra de navegacion-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div >
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="login.html">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,53 +19,76 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="lider-projects.html">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="status-project.html">Estado proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="lider-add-project.html">Registro proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="list-bugs.html">Lista defectos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!--Barra de navegacion-->
-  <div class="form-add-project">
-    <h3>Registros  de proyectos a prueba:</h3> 
-    <br>
-    <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nombre del proyecto:</label>
-          <input type="text" class="form-control" id="nombre-project" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="lider" class="form-label">Lider de desarrollo</label>
-          <input type="text" class="form-control" id="lider-project">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Descripcion</label>
-          <br>
-          <textarea id="descripcion" name="comentario" rows="6" cols="100"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputTipoPrueba" class="form-label">Tipo de prueba: </label>
-            <select class="form-control" id="exampleInputTipoPrueba">
-              <option>Seleccione  una  opcion </option>
-              <option>Manuales</option>
-              <option>Automatizadas</option>
-              <option>Rendimiento</option>
-            </select>
-          </div> 
-        <button type="submit" class="btn btn-primary">Registrar proyecto</button>
-        <div class="d-flex flex-column align-items-center">
-        <img src="https://cdn3.iconfinder.com/data/icons/prettycons-user-interface-vol-3-ultra/60/50-Add_New_Section-app_web_computer_development-256.png">
-        </div> 
-    </form>
 </div>
+<!--Barra de navegacion-->
+
+<div class="form-add-project">
+    <form>
+      <h3>Registros  de proyectos a prueba:</h3> 
+      <br>
+        <div class="mb-3">
+          <!--<label for="exampleInputEmail1" class="form-label">Nombre del proyecto:</label>-->
+          <label>Nombre del proyecto</label>
+          <input type="text" class="form-control" id="txtNombre-project" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <!--<label for="lider" class="form-label">Lider de desarrollo</label>-->
+          <label>Lider</label>
+          <input type="text" class="form-control" id="txtlider-project">
+        </div>
+        <div class="mb-3">
+          <!--<label for="lider" class="form-label">Prueba</label>-->
+          <label>Pruebas</label>
+          <input type="text" class="form-control" id="txtdescripcion">
+        </div>
+
+        <div class="mb-3">
+          <!--<label for="lider" class="form-label">Prueba</label>-->
+          <label>Tester</label>
+          <input type="text" class="form-control" id="txt-tester">
+        </div>
+
+        <div class="mb-3">
+          <!--<label for="lider" class="form-label">Prueba</label>-->
+          <label>Fecha Liberacion</label>
+          <input type="text" class="form-control" id="txt-fecha">
+        </div>  
+
+
+
+        <div class="d-flex flex-column align-items-center">
+          <!--<img src="https://cdn3.iconfinder.com/data/icons/prettycons-user-interface-vol-3-ultra/60/50-Add_New_Section-app_web_computer_development-256.png">-->
+          <img class="imagenes-projects" src="https://cdn2.iconfinder.com/data/icons/toolbar-edge/512/create-256.png" onclick="register()">
+          <label>Registrar proyecto</label>
+        </div>
+        <div id="list">Regisros: </div>
+    </form>
+
+    <!--
+    <div class="mb-3">
+      <button class="btn btn-primary" onclick="register()">Registrar proyecto</button>
+    </div>
+    -->
+</div>
+    
+
+<script src="./scripts/register.js"></script>
+
+
 </body>
 </html>

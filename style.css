@@ -6,10 +6,12 @@
 }
 
 .project-table{
+    
     border-radius: 10px;
     overflow: hidden;
     width: 80%;
-    background-color: rgba(104, 98, 98, 0.863);
+    /*background-color: rgba(104, 98, 98, 0.863);*/
+    background-color: rgba(173, 173, 173, 0.863);
     color: black;      
   /*  font-family: 'Poppins', sans-serif;*/
     font-family: 'Roboto', sans-serif;
@@ -32,11 +34,24 @@
     height: 80px;
 }
 
+
 .form-add-project{
-    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;  
+    background-color: #f9f9f9;
+   
+    /* width: 100%;
     max-width: 1000px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;*/
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
 }
