@@ -31,13 +31,15 @@ function Proyecto(name,lider,prueba,tester,fecha){
 
     proyectos.push(newProyecto);
     localStorage.setItem("proyectos", JSON.stringify(proyectos));
+    window.location.href = "list-datos-projects.html";
 
-    displayProjects();
+    /*displayProjects();*/
 
-    inputProject.value = "";
+    /*inputProject.value = "";
     inputLider.value = "";
     inputPrueba.value = "";
-    inputFecha.value = "";
+    inputTester.value = "";
+    inputFecha.value = "";*/
 
     }
 
@@ -45,17 +47,20 @@ function Proyecto(name,lider,prueba,tester,fecha){
     // Mostrar estudiantes en pantalla
     function displayProjects(){
 
-    const list = document.getElementById("list");
+    const list = document.getElementById("lista-proyectos");
     list.innerHTML = "";
 
     proyectos.forEach((proyecto, index) => {
     let proyectoElement = `
-    <div>
-    <p>${proyecto.name} - ${proyecto.lider} - ${proyecto.prueba} - ${proyecto.fecha}</p>
+    <tr>
+        <td>${proyecto.name}</td>
+        <td>${proyecto.lider}</td>  
+        <td>${proyecto.prueba}</td>
+        <td>${proyecto.tester}</td>
+        <td>${proyecto.fecha}</td>
+        <td><button class="btn btn-danger" onclick="deleteStudent(${index})">Eliminar</button></td>
     
-    <button class="btn btn-warning" onclick="deleteStudent(${index})">Eliminar</
-    button>
-    </div>
+    </tr>
     `;
     list.innerHTML += proyectoElement;
     });
