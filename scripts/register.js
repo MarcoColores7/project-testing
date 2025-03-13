@@ -1,48 +1,85 @@
 
 function Proyecto(name,lider,prueba,tester,fecha){
-this.name = name;
-this.lider = lider;
-this.prueba = prueba;
-this.tester = tester;
-this.fecha = fecha;
-}
-
-
-//Get the input field
-const inputProject = document.getElementById("txtNombre-project");
-const inputLider = document.getElementById("txtlider-project");
-const inputPrueba = document.getElementById("txtdescripcion");
-const inputTester = document.getElementById("txt-tester");
-const inputFecha = document.getElementById("txt-fecha");
-
-
-function register(){
-let newProyecto = new Proyecto(inputProject.value,inputLider.value,inputPrueba.value,inputTester.value,inputFecha.value);
-/*console.log(inputProject.value,inputLider.value,inputPrueba.value);*/
-if(inputProject.value === "" ){
-    alert("El campo nombre del proyecto es obligatorio");
-    return;
-}else{
+    this.name = name;
+    this.lider = lider;
+    this.prueba = prueba;
+    this.tester = tester;
+    this.fecha = fecha;
+    }
     
-    display(newProyecto);
-   /* alert("Proyecto registrado con éxito");*/
-}
+    // Obtener inputs del HTML
+    const inputProject = document.getElementById("txtNombre-project");
+    const inputLider = document.getElementById("txtlider-project");
+    const inputPrueba = document.getElementById("txtdescripcion");
+    const inputTester = document.getElementById("txt-tester");
+    const inputFecha = document.getElementById("txt-fecha");
 
-}
+
+    // Obtener estudiantes guardados o inicializar arreglo vacío
+    let proyectos = JSON.parse(localStorage.getItem("proyectos")) || [];
+   
+   
+    // Registrar nuevo estudiante
+    function register(){
+
+    if(inputProject.value === ""){
+    alert("Ingresa nombre  del proyecto");
+    return;
+    }
+
+    let newProyecto = new Proyecto(inputProject.value, inputLider.value, inputPrueba.value, inputTester.value,inputFecha.value);
+
+    proyectos.push(newProyecto);
+    localStorage.setItem("proyectos", JSON.stringify(proyectos));
+
+    displayProjects();
+
+    inputProject.value = "";
+    inputLider.value = "";
+    inputPrueba.value = "";
+    inputFecha.value = "";
+
+    }
 
 
+    // Mostrar estudiantes en pantalla
+    function displayProjects(){
 
-/*<p>${Proyecto.name} -${Proyecto.lider} - ${Proyecto.prueba}</p>*/	
-function display(Proyecto){
     const list = document.getElementById("list");
-    p=`
+    list.innerHTML = "";
+
+    proyectos.forEach((proyecto, index) => {
+    let proyectoElement = `
     <div>
-<p>${Proyecto.name} -${Proyecto.lider} - ${Proyecto.prueba} -${Proyecto.tester} -${Proyecto.fecha} </p>    </div
+    <p>${proyecto.name} - ${proyecto.lider} - ${proyecto.prueba} - ${proyecto.fecha}</p>
+    
+    <button class="btn btn-warning" onclick="deleteStudent(${index})">Eliminar</
+    button>
+    </div>
     `;
-    list.innerHTML+=p;
+    list.innerHTML += proyectoElement;
+    });
+    }
 
-}
 
-/*let proyecto = new Proyecto("Proyecto1","Lider1","Prueba1");
-let proyecto2 = new Proyecto("Proyecto2","Lider2","Prueba2");
-console.log(proyecto,proyecto2);*/
+
+    // Eliminar un estudiante
+    function deleteStudent(index){
+    proyectos.splice(index, 1);
+    localStorage.setItem("proyectos", JSON.stringify(proyectos));
+    displayProjects();
+    }
+
+
+
+    // Borrar todos los datos del ls
+    function clearStorage(){
+    localStorage.removeItem("proyectos");
+    proyectos = [];
+    displayProjects();
+    }
+
+
+
+    // Mostrar estudiantes
+    document.addEventListener("DOMContentLoaded", displayProjects);
