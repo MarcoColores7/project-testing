@@ -55,3 +55,82 @@
     text-align: center;
     vertical-align: middle;
 }
+
+
+
+
+.fondo-login {
+    background-image: url('images/dib.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;  
+}
+
+
+
+.fondo-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: inherit;
+    background-repeat: inherit;
+    background-position: inherit;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+
+.form-container .btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+.navbar-custom {
+    background-color: #006b40; /* Cambia este color al que prefieras */
+    font-size: 20px; /* Cambia este tamaño al que prefieras */
+}
+
+.navbar-custom .nav-link {
+    color: white; /* Cambia el color del texto al que prefieras */
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón por encima */
+}
+
+.navbar-custom .navbar-nav .nav-item {
+    margin-right: 60px; /* Ajusta este valor para cambiar la separación */
+}
+
+
+.footer {
+    color: white;
+    background-color: #006b40;
+    margin-top: 6em;
+    padding: 0.5em;
+    padding-left: calc(32% - 240px);
+    padding-right: calc(32% - 240px);
+    text-align: center;
+    font-size: 10pt;
+}
