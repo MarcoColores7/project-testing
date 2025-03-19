@@ -127,10 +127,31 @@
 .footer {
     color: white;
     background-color: #006b40;
-    margin-top: 6em;
-    padding: 0.5em;
+    margin-top: 300px;
+    width: 100%;
+    padding: 10px;
+    /*margin-top: 6em;*/
+    /*padding: 0.5em;*/
     padding-left: calc(32% - 240px);
     padding-right: calc(32% - 240px);
     text-align: center;
     font-size: 10pt;
+}
+
+
+.principal-avance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Ajusta la altura según sea necesario */
+}
+
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }

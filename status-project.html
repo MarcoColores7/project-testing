@@ -8,79 +8,125 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="login.html">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="lider-projects.html">Proyectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="status-project.html">Estado proyectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="lider-add-project.html">Registro proyectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="list-bugs.html">Lista defectos</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+ <!--Barra de navegacion-->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="login.html">
+      <img src="images/dds_logo.png" alt="Logo" style="height: 40px; margin-right: 20px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
 
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="lider-projects.html">
+            <img src="images/projects.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
 
+            Proyectos
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="lider-add-project.html">
+            <img src="images/register-project.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+            Registro proyectos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="list-datos-projects.html">
+            <img src="images/list-projects.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+            Lista proyectos
+          </a>              
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="status-project.html">
+            <img src="images/report-project.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+            Reportes
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="list-bugs.html">
+            <img src="images/bugs-list.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+            Bugs
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Barra de navegacion-->
 
     <div class="main-flex">
   
         <header>
             <div class="my-info">            
         
-                <h1>Reporte ejecutivo de pruebas</h1>
+                <h1 style="margin-top: 40px;">Reporte ejecutivo de pruebas</h1>
             </div>
             <br>
         </header>
         <main>
-            <div>
-                <h2>Sistema: </h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
-            </div>
-    
-            <img src="https://cdn1.iconfinder.com/data/icons/data-science-flat-1/64/statistics-pie-chart-label-data-report-256.png" class="mb-4 imagenes"> 
-            <li><a class="nav-link" href="list-bugs.html">Lista defectos registrados</a></li>
-            
-            <!--
-            <div class="container">
-                <h3>Lista de defectos detallada: </h3>
-                <ul>
-                    <li><a class="nav-link" href="list-bugs.html">Lista defectos</a>Defectos  manuales</li>
-                    <li>Defectos en rendimiento</li>
-                    <li>Defectos en pruebas automatizadas</li>
-                </ul>
-                <img src="https://cdn1.iconfinder.com/data/icons/data-science-flat-1/64/statistics-pie-chart-label-data-report-256.png" class="mb-4 imagenes">
-            </div>
-            -->
+
+          <div>
+            <h2>Sistema: </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero dolorum ab in voluptatem ipsa iure necessitatibus modi </p>
+        </div>
+        <br>
+        <br>
+
+        <div class="progress">
+          <label for="progress-bar-1">Progreso pruebas unitarias:</label>
+          <div class="progress-bar progress-bar-striped" role="progressbar" aria-label="Default striped example" style="width: 30%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">30% avance</div>
+        </div><br>
+
+
+        <div class="progress">
+          <label for="progress-bar-1">Progreso pruebas funcionales:</label>
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25% avance</div>
+        </div><br>
+
+        <div class="progress">
+          <label for="progress-bar-1">Progreso pruebas rendimiento:</label>
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" aria-label="Info striped example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50% avance</div>
+        </div><br>
+
+        <div class="progress">
+          <label for="progress-bar-1">Analisis estatico:</label>
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" aria-label="Warning striped example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% avance</div>
+        </div><br>
+
+        <div class="progress">
+          <label for="progress-bar-1">Pruebas  de seguridad:</label>
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-label="Danger striped example" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75% avance</div>
+        </div><br>
+        <div  class="center-image">
+        <img src="https://cdn1.iconfinder.com/data/icons/data-science-flat-1/64/statistics-pie-chart-label-data-report-256.png" class="mb-4 imagenes"> 
+        <li><a class="nav-link" href="list-bugs.html">Lista defectos registrados</a></li>
+        </div>
+
+
+        </main>
+           
         
     </div>
     
     
-        </main>
     
     </div>
-    
-    
+
+    <div class="footer">
+      <p>Desarrollado por: <a href="www.linkedin.com/in/marco-antonio-morales-colores-0402b2342">Marco Colores</a></p>
+      <p>D.R. © Universidad Autónoma de Baja California | México 2025</p>
+   </div>
 
 
-
-
-    
 </body>
 </html>
