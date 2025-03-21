@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Bugs</title>
+    
+    <!-- Incluir CSS de DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Incluir jQuery y DataTables -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        /* Estilos generales */
+       /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }*/
+
+        /* Contenedor centrado */
+        .container {
+            width: 80%;
+            max-width: 900px; /* Ajustar el ancho de la tabla */
+         /*   background: white;*/
+            /*background: #388e3c;*/
+            background: #E8E8E8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 90px;
+        }
+
+        /* Asegurar que la tabla no se expanda demasiado */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Ajustes visuales de DataTables */
+        .dataTables_wrapper {
+            text-align: center;
+        }
+
+        /* Ajustar el tamaño de la celda para evitar que se expandan demasiado */
+        th, td {
+            text-align: center;
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        .navbar-custom {
+        background-color: #006b40; /* Fondo de la barra de navegación */
+        font-size: 18px; /* Tamaño de la fuente */
+        }
+
+
+        .navbar-custom .nav-link {
+        color: white; /* Color del texto */
+        }
+
+        .navbar-custom .nav-link:hover {
+        color: #ddd; /* Color del texto al pasar el ratón */
+        }
+
+        .navbar-custom .navbar-brand {
+        color: white; /* Color del texto de la marca */
+        }
+
+        .navbar-custom .navbar-brand:hover {
+        color: #ddd; /* Color del texto de la marca al pasar el ratón */
+        }
+
+        .navbar-custom .navbar-nav .nav-item {
+       margin-left: 50px; /* Espacio a la izquierda de cada elemento <li> */
+        }
+
+
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#bugsTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.13.6/i18n/Spanish.json"
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+ <!--Barra de navegacion-->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="login.html">
+        <img src="images/dds_logo.png" alt="Logo" style="height: 40px; margin-right: 20px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="lider-projects.html">
+                <img src="images/projects.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+
+                Proyectos
+            </a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="registro-proyectos.html">
+                <img src="images/register-project.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+                Registro proyectos</a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="list-datos-projects.html">
+                <img src="images/list-projects.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+                Lista proyectos
+            </a>              
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="status-project.html">
+                <img src="images/report-project.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+                Reportes
+            </a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="list-bugs.html">
+                <img src="images/bugs-list.png" alt="Proyectos" style="height: 40px; margin-right: 0;">
+                Bugs
+            </a>
+            </li>
+
+        </ul>
+        </div>
+    </div>
+    </nav>
+<!--Barra de navegacion-->
+
+
+    <div class="container">
+        <h2 style="text-align: center;">Lista de Bugs</h2>
+        <div style="text-align: center; margin-top: 10px;">
+            <img src="https://cdn0.iconfinder.com/data/icons/mobile-app-development-soft-fill/60/Bug-Search-Mobile-bugs-error-256.png" alt="Icono de Bugs" style="width: 100px;">
+        </div>
+        <table id="bugsTable" class="display">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ID BUG</th>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>BUG-001</td>
+                    <td>Error de inicio de sesión</td>
+                    <td>Los usuarios no pueden iniciar sesión con credenciales correctas.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BUG-002</td>
+                    <td>Página en blanco</td>
+                    <td>Después de actualizar, la página muestra una pantalla en blanco.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>BUG-003</td>
+                    <td>Error en carga de imágenes</td>
+                    <td>Las imágenes subidas no se muestran correctamente en la galería.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
