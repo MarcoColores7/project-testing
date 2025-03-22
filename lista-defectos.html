@@ -12,81 +12,8 @@
     <!-- Incluir jQuery y DataTables -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
-    <style>
-        /* Estilos generales */
-       /* body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }*/
-
-        /* Contenedor centrado */
-        .container {
-            width: 80%;
-            max-width: 900px; /* Ajustar el ancho de la tabla */
-         /*   background: white;*/
-            /*background: #388e3c;*/
-            background: #E8E8E8;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 90px;
-        }
-
-        /* Asegurar que la tabla no se expanda demasiado */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        /* Ajustes visuales de DataTables */
-        .dataTables_wrapper {
-            text-align: center;
-        }
-
-        /* Ajustar el tamaño de la celda para evitar que se expandan demasiado */
-        th, td {
-            text-align: center;
-            padding: 10px;
-            white-space: nowrap;
-        }
-
-        .navbar-custom {
-        background-color: #006b40; /* Fondo de la barra de navegación */
-        font-size: 18px; /* Tamaño de la fuente */
-        }
-
-
-        .navbar-custom .nav-link {
-        color: white; /* Color del texto */
-        }
-
-        .navbar-custom .nav-link:hover {
-        color: #ddd; /* Color del texto al pasar el ratón */
-        }
-
-        .navbar-custom .navbar-brand {
-        color: white; /* Color del texto de la marca */
-        }
-
-        .navbar-custom .navbar-brand:hover {
-        color: #ddd; /* Color del texto de la marca al pasar el ratón */
-        }
-
-        .navbar-custom .navbar-nav .nav-item {
-       margin-left: 50px; /* Espacio a la izquierda de cada elemento <li> */
-        }
-
-
-
-    </style>
-
+    <link rel="stylesheet" href="estilo-lista-defectos.css">
+    
     <script>
         $(document).ready(function () {
             $('#bugsTable').DataTable({
