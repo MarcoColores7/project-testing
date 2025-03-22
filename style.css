@@ -230,3 +230,18 @@ input:focus, select:focus, textarea:focus {
 .btn i {
     font-size: 18px;
 }
+
+.table-centered {
+    margin: 0 auto; 
+    width: 80%; 
+    max-width: 800px; 
+    border: 1px solid #ddd;
+}
+
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
